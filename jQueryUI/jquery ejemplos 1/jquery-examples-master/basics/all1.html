@@ -22,10 +22,13 @@
 
 <div>DIV</div>
 <span>SPAN</span>
-<p>P <button>Button</button></p>
+<p>P <button>Botón</button></p>
 
 <script>
+//poner bordes de grosor 3 rojo a * todos los elementos
 var elementCount = $( "*" ).css( "border", "3px solid red" ).length;
+  console.log(elementCount);
+  //coloca elemendo h3 antes del body
 $( "body" ).prepend( "<h3>" + elementCount + " elements found</h3>" );
 </script>
 
