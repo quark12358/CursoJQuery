@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+HTML DOM
+Algunos de los métodos para manipular CSS son:
+• addClass(), añadir clases
+• removeClass(), eliminar clases
+• toggleClass(), cambiar entre añadir y eliminar clases.
+• css(), establecer o devolver el atributo de estilo
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    $("#b1").click(function () {
+    $("h1").addClass("azul");
+    $("div, #p2").addClass("resaltar");
+    });
+    });
+    $(document).ready(function () {
+    $("#b2").click(function () {
+    $("h2").css({"background-color":"lightgreen"})
+    alert("Tamaño de fuente de h1: " + $("h1").css("fontsize"));
+    });
+    });
+    </script>
+    <style>
+    .resaltar {
+    font-weight: bold;
+    font-size: large;
+    }
+    .azul {
+    color: blue;
+    }
+    </style>
+   </head>
+   <body>
+    <h1>Cabecera 1</h1>
+    <h2>Cabecera 2</h2>
+    <p>Párrafo 1</p>
+    <p id="p2">Párrafo 2</p>
+    <div>División de texto</div>
+    <button id="b1">Añadir clases</button>
+    <button id="b2">Añadir clases</button>
+   </body>   </head>
+</html>
+

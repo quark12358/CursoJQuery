@@ -1,0 +1,57 @@
+dia 1 
+Intro
+1.	Actualizar jquery
+https://github.com/jquery/jquery-migrate/#readme
+In your web page, load this plugin after the script tag for jQuery, for example:
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+
+2.	Deprecated 
+Revisar los métodos en desuso o no existentes en mi versión jQuery.
+https://api.jquery.com/category/deprecated/
+
+3.	Documentación de librería.
+Oficial: 
+https://jquery.com/
+https://jqueryui.com/
+https://api.jquery.com/
+https://learn.jquery.com/
+
+
+Tutoriales con ejemplos para cambiar y probar online:
+https://www.tutorialsteacher.com/jquery/jquery-post-method
+https://www.w3schools.com/jquery/
+
+4.	Seguridad
+https://security.snyk.io/package/npm/jquery
+https://nvd.nist.gov/products/cpe/search/results?namingFormat=2.3&keyword=cpe%3A2.3%3Aa%3Ajquery%3Ajquery%3A3.3.1
+https://nvd.nist.gov/vuln/search/results?adv_search=true&isCpeNameSearch=true&query=cpe%3A2.3%3Aa%3Ajquery%3Ajquery%3A3.3.1%3A*%3A*%3A*%3A*%3Anode.js%3A*%3A*
+https://github.com/orgs/SonarSource/repositories?type=all
+
+https://security.snyk.io/package/npm/jquery
+https://www.ccn-cert.cni.es/series-ccn-stic/800-guia-esquema-nacional-de-seguridad/522-ccn-stic-812-seguridad-en-entornos-y-app-web/file.html
+https://www.ccn-cert.cni.es/component/search/?searchword=javascript&searchphrase=all&Itemid=784
+
+https://www.cvedetails.com/product/11031/Jquery-Jquery.html?vendor_id=6538
+https://blog.elhacker.net/2021/09/xss-o-crosssite-scripting-tipos-de-ataque-y-prevencion.html
+https://www.virtuesecurity.com/jquery-security-model-explained/
+
+5.	Librería desarrollo
+https://github.com/jquery/jquery
+6.	Otros
+https://github.com/davidam/jquery-examples
+https://www.postman.com/
+
+
++ ejemplos jq
++ depuración cliente extensiones , navegador ,etc
+
++ C:\Cursos\Ayuntamiento de Alcobendas\ilp\ejemplos3\CURSODADO
++ C:\Cursos\Ayuntamiento de Alcobendas\ilp\ejemplos3\CURSOPENDIENTE
+http://127.0.0.1:5500/ejemplos3/CURSOPENDIENTE/EJEMPLOS/overclassTocar.html
+http://127.0.0.1:5500/ejemplos3/CURSOPENDIENTE/ADEMANDA/datepicker.html
+http://127.0.0.1:5500/ejemplos3/CURSODADO/22AJAXCargarecurso.html
+http://127.0.0.1:5500/ejemplos3/CURSODADO/21Parientes%20y%20filtros.html
+http://127.0.0.1:5500/ejemplos3/CURSODADO/20HRecorrer%20elementosHijos.html
+http://127.0.0.1:5500/ejemplos3/CURSODADO/Validaciones/dniniepassValidacionmanual.html
+http://127.0.0.1:5500/ejemplos3/CURSOPENDIENTE/EJEMPLOS/bloqueos/ejemplosbloquos1.html

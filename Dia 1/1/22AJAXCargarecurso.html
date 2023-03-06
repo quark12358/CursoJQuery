@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+jQuery cuenta con algunos métodos para cargar o enviar contenido externo. 
+Load() permite cargar contenido externo. Tiene tres parámetros que se pueden utilizar o no, 
+responseTxt, para saber el resultado de la carga, statusTxt, con el estado de la llamada, y xhr, 
+con el objeto XMLHttpRequest.
+
+-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script>
+    $(document).ready(function () {
+      $("button").click(function () 
+      {
+         $("#p1").load("ajax_info.txt", function (responseTxt,    statusTxt, xhr) 
+         {
+         if (statusTxt == "success")
+            alert("El contenido externo se ha cargado");
+         if (statusTxt == "error")
+            alert("Error: " + xhr.status + ": " +    xhr.statusTxt);
+      });
+      });
+    });
+    </script>
+   </head>
+   <body>
+    <p id="p1">Párrafo 1</p>
+    <div style="border: 1px solid black;">
+    <p>Párrafo 2 en div 1</p>
+    <p>Párrafo 3 en div 1</p>
+    </div>
+    <button>Traer contenido externo</button>
+   </body>
+   
+  </html>
+  

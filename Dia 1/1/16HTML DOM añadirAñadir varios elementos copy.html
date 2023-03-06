@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+HTML DOM
+Con after() y before() se pueden añadir el número de elementos que necesitemos.
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script>
+    function generarTexto() {
+    var txt1 = "<b>Este </b>"; // Elemento creado con HTML
+    var txt2 = $("<i></i>").text("texto es "); // Creado con jQuery
+    var txt3 = document.createElement("b"); // Creado con DOM
+    txt3.innerHTML = "Nuevo";
+    $("h2").after(txt1, txt2, txt3); 
+    }
+    </script>
+   </head>
+   <body>
+    <h2>Este es el Título.</h2><br />
+    <button onclick="generarTexto()">Insertar después del Título</button>
+   </body>
+   </head>
+</html>
+

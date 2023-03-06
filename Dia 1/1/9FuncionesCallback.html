@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+Funciones callback
+Esta función se lanza después de que los efectos se hayan ejecutado al 100%.
+La sintaxis es: $(selector).hide(speed,callback)
+
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+
+   </head>
+   <body>
+    <table border="1">
+    <tr>
+    <th id="tema">Tema</th>
+    <th id="estado">Estado</th>
+    </tr>
+    <tr>
+    <td>HTML</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>CSS</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>JavaScript</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>Json</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>jQuery</td>
+    <td>En progerso</td>
+    </tr>
+    </table>
+   </body>
+
+   <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("button").click(function () {
+        $("p").hide("slow", function () {
+        alert("El párrafo se ha ocultado");// se lanza solo    después de que hide se haya ejecutado.
+        });
+        });
+        });
+    </script>
+   </head>
+   <body>
+        <button>Ocultar</button>
+        <p>Párrafo con contenido.</p>
+   </body>
+   
+</html>
+

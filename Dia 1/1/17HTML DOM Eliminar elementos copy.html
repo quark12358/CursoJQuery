@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+HTML DOM
+Los métodos son:
+• Remove(), elimina los elementos seleccionados y sus hijos
+• Empty(), elimina los elementos hijos de los seleccionados
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script>
+    $(document).ready(function () {
+    $("#b1").click(function () {
+    $("#div1").remove();
+    });
+    $("#b2").click(function () {
+    $("#div1").empty();
+    });
+    });
+    </script>
+   </head>
+   <body>
+    <div id="div1" style="height: 100px; width: 300px; border: 1px solid
+   black; background-color: greenyellow ">
+    Este es el div.
+    <p>Párrafo 1, dentro del div</p>
+    <p>Párrafo 2, dentro del div</p>
+    </div>
+    <br />
+    <button id="b1" onclick="borrarDiv()">Borrar el div y sus 
+   elementos</button>
+    <button id="b2" onclick="vaciarDiv()">Borrar solo sus elementos</button>
+   </body>
+       <h2>Este es el Título.</h2><br />
+    <button onclick="generarTexto()">Insertar después del Título</button>
+   </body>
+   </head>
+</html>
+

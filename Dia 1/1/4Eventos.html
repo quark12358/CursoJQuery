@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+Se utiliza cualquier tipo de eventos DOM, 
+como los de ratón, teclado, formulario, documento o 
+ventana. 
+Sobre el ejemplo anterior, modificamos el script para incluir eventos. 
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+
+   </head>
+   <body>
+    <table border="1">
+    <tr>
+    <th id="tema">Tema</th>
+    <th id="estado">Estado</th>
+    </tr>
+    <tr>
+    <td>HTML</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>CSS</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>JavaScript</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>Json</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>jQuery</td>
+    <td>En progerso</td>
+    </tr>
+    </table>
+   </body>
+   <script>
+    $(document).ready(function () {
+        $("tr:even").css("background-color", "lightgreen");
+            $("tr:odd").css("background-color", "aqua");
+            $("#tema").mouseenter(function () {
+                $(this).css("font-size", "20px")
+            });
+            $("#tema").mouseleave(function () {
+                alert("Has puesto el ratón sobre el Tema y te fuiste");
+                $(this).css("font-size", "10px");
+            });
+        });
+    </script>
+</html>

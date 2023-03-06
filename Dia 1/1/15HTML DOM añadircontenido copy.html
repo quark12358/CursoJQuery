@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+HTML DOM
+Añadir contenido
+Los métodos utilizados para añadir contenido son:
+• Append(), al final de los elementos seleccionados
+• Prepend(), al principio de los elementos seleccionados
+• After(), después de los elementos seleccionados
+• Before(), antes de los elementos seleccionados-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    $("#btn1").click(function () {
+    $("p").append(" <b>Texto añadido</b>.");
+    });
+    $("#btn2").click(function () {
+    $("ol").append("<li>Punto añadido</li>");
+    });
+    $("#btn3").click(function () {
+    $("p").prepend(" <b>Texto añadido</b>.");
+    });
+    $("#btn4").click(function () {
+    $("ol").prepend("<li>Punto añadido</li>");
+    });
+    $("#btn5").click(function () {
+    $("button").before(" <b>Antes</b>.");
+    });
+    $("#btn6").click(function () {
+    $("button").after("<i>Después</i>");
+    });
+    });
+    </script>
+   </head>
+   <body>
+    <p>Párrafo 1.</p>
+    <ol>
+    <li>Punto 1</li>
+    <li>Punto 2</li>
+    <li>Punto 3</li>
+    </ol>
+    <div>
+    <button id="btn1">Añadir texto al final</button>
+    <button id="btn2">Añadir punto al final</button>
+    </div>
+    <br />
+    <div>
+   Aledit, Servicios Profesionales Danysoft. www.aledit.com
+    <button id="btn3">Añadir texto al principio</button>
+    <button id="btn4">Añadir punto al principio</button>
+    </div>
+    <br />
+    <div>
+    <button id="btn5">Antes de los botones</button>
+    <button id="btn6">Después de los botones</button>
+    </div>
+   </body>
+</html>
+

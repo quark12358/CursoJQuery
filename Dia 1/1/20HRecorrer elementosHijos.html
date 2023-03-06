@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+En el siguiente ejemplo tenemos children(), para todos los descendientes directos, y find() para 
+los descendientes del tipo buscado
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+   //descendientes de div con children
+/*    $(document).ready(function () {
+    $("div").children().css({ "color": "red", "border": "2px solid     red" });
+    });
+    */
+     //todos los span que descienden de div con find
+    $(document).ready(function () {
+    $("div").find("span").css({ "color": "green", "border": "2px    solid green" });
+    });
+    
+    </script>
+    <style>
+    * {
+    border: 2px solid lightblue;
+    }
+    </style>
+   </head>
+   <body>
+    <div>
+    div (elemento actual)
+    <p>
+    p (child)
+    <span>span (grandchild)</span>
+    </p>
+    <p>
+    p (child)
+    <span>span (grandchild)</span>
+    </p>
+    </div>
+   </body>
+   
+</head>
+</html>
+

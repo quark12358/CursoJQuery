@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet"
+		href=
+"https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+	<script src=
+"https://code.jquery.com/jquery-1.10.2.js">
+	</script>
+	<script src=
+"https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+	</script>
+	<style>
+		.dragg {
+			width: 90px;
+			height: 60px;
+			border: 1px solid black;
+			background-color: blue;
+			font-size: 20px;
+		}
+
+		.dropp2{
+			width: 250px;
+			height: 60px;
+			font-size: 20px;
+			border: 1px solid black;
+			float: center;
+			background-color: green;
+		}
+		
+		#btn
+		{
+			padding: 0.5;
+			font-size: 20px;
+			width: 20%;
+		}
+	</style>
+	<script>
+		$(function () {
+			$("#btn").on('click', function () {
+				var hoverClass = $(".dropp2")
+				.droppable( "option", "hoverClass" );
+				$("#gfg").html("HoverClass Value: "+hoverClass);
+			});
+		});
+		
+		$(function () {
+			$(".dragg").draggable();
+			$(".dropp2").droppable({
+				drop: function (event, ui) {
+					$(this).find("p").html("Dropped!");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<center>
+		<h1 style="color:green;">GeeksforGeeks</h1>
+		<h3>jQuery UI Droppable hoverClass Option</h3>
+		<div class="dragg">
+			<p>Drag</p>
+
+		</div>
+		<br>
+		<div class="dropp2">
+			<p>Drop here</p>
+
+		</div>
+		<br>
+		<input type="button" id="btn" value="Click">
+		<h3><span id="gfg"></span></h3>
+	</center>
+</body>
+</html>

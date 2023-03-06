@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+Los métodos get() y post() permiten pedir y enviar contenido de y hacia el servidor.
+El método get() pide datos del servidor con una petición HTTP GET.
+Página HTML
+
+-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ <script>
+ $(document).ready(function () {
+ $("button").click(function () {
+ $.post("respuesta2.asp",
+ {
+ nombre: "Ana",
+ edad: 50
+ },
+function (datos) {
+ alert(datos);
+ });
+ });
+ });
+ </script>
+</head>
+<body>
+ <button>Traer contenido externo</button>
+</body>
+
+   
+  </html>
+  

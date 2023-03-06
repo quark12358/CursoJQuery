@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+Hay otros muchos métodos para recorrer lo elemento a partir de parientes (sibiling), como son 
+siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), prevUntil().
+También hay métodos para filtrar por elementos como son first(), last() y eq(), que filtran a 
+partir de la situación de un elemento, y filter() y not(), que permiten seleccionar aquellos que 
+coinciden con un determinado criterio.
+-->
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script>
+   $(document).ready(function () {
+   $("div").first().css("background-color", "lightgreen");
+   });
+   $(document).ready(function () {
+   $("div").last().css("background-color", "lightyellow");
+   });
+   $(document).ready(function () {
+   $("p").eq(0).css("background-color", "lightblue");
+   });
+   $(document).ready(function () {
+   $("p").filter(".d2").css("background-color", "orange");
+   });
+   </script>
+  </head>
+  <body>
+   <p>Párrafo 1</p>
+   <div style="border: 1px solid black;">
+   <p>Párrafo 2 en div 1</p>
+   <p>Párrafo 3 en div 1</p>
+   </div>
+   <br>
+   <div style="border: 1px solid black;">
+   <p class="d2">Párrafo 4 en div 2</p>
+   <p class="d2">Párrafo 5 en div 2</p>
+   </div>
+   <br>
+   <div style="border: 1px solid black;">
+   <p>Párrafo 6 en div 3</p>
+   <p>Párrafo 7 en div 3</p>
+   </div>
+  </body>
+  </html>
+  

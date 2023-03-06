@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+Encadenar métodos (chaining)
+Permite ejecutar múltiples métodos jQuery de forma encadenada, sobre un mismo elemento.
+De esta forma evitamos buscar el mismo elemento varias veces. Solo hay que añadir una 
+acción detrás de otra.
+En este caso, se encadenan los métodos css(), slideUp(), y slideDown().
+
+
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+
+   </head>
+   <body>
+    <table border="1">
+    <tr>
+    <th id="tema">Tema</th>
+    <th id="estado">Estado</th>
+    </tr>
+    <tr>
+    <td>HTML</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>CSS</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>JavaScript</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>Json</td>
+    <td>Visto</td>
+    </tr>
+    <tr>
+    <td>jQuery</td>
+    <td>En progerso</td>
+    </tr>
+    </table>
+   </body>
+
+   <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        $(document).ready(function () {
+        $("button").click(function () {
+        $("p").css("color", "blue").slideUp(2000).slideDown(2000);
+        });
+        });
+       //jQuery no es especialmente estricto con la sintaxis
+       //Para facilitar la lectura si hay muchos métodos podemos escribir:
+       //$("p").css("color", "blue")
+       //.slideUp(2000)
+       //.slideDown(2000);
+        </script>
+       </head>
+       <body>
+        <button>Ocultar</button>
+        <p>Contenido párrafo 1</p>
+        <p>Contenido párrafo 2</p>
+       </body>
+       
+   
+</html>
+

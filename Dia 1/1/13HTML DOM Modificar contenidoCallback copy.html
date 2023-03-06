@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+HTML DOM
+También se puede utilizar una función callback(). Tiene dos parámetros, el índice del elemento 
+actual en la lista de elementos seleccionados, y el valor original
+-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    $("#boton1").click(function () {
+    $("#prueba1").text(function (i, original) {
+    return "Texto original: " + original + ", Este es el nuevo texto. Y el índice es (" + i + ")";
+    });
+    });
+    $("#boton2").click(function () {
+    $("#prueba2").html(function (i, original) { 
+    return "HTML original: " + original + ", Este es el    <b>nuevo</b> HTML. Y el índice es (" + i + ")";
+    });
+    });
+    });
+    </script>
+   </head>
+   <body>
+    <p id="prueba1">Párrafo 1</p>
+    <p id="prueba2">Este es el <b>segundo</b> párrafo.</p>
+    <button id="boton1">Mostrar texto</button>
+    <button id="boton2">Mostrar HTML</button>
+   </body>
+</html>
+
