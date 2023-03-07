@@ -88,17 +88,29 @@ $.get("https://petstore3.swagger.io/api/v3/pet/10", function(data, status){
 
   });
 
+  //$("#dameel10").click(function(){ var url2 = 
+    $.get("https://petstore3.swagger.io/api/v3/pet/10", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+
+
+      //mira los elementos propiedad valor
+      $.each(data, function (ind, elem) { 
+        console.log('¡find by tags :'+ elem.id +'!'); });
+    });
+});
+
+
 
 //hacer un post
   //post local  //https://petstore3.swagger.io/api/v3/pet
   $("#btn2").click(function(){
     $.post("https://petstore3.swagger.io/api/v3/pet",
     {
-        "id": 887,
-        "name": "migatito222",
+        "id": 652125,
+        "name": "hhhhhhhh",
         "category": {
             "id": 1,
-            "name": "Dogs"
+            "name": "ppp"
         },
         "photoUrls": [
             "string"
@@ -133,7 +145,7 @@ $.get("https://petstore3.swagger.io/api/v3/pet/10", function(data, status){
     */
 
 
-});
+
 </script>
 </head>
 <body>
@@ -143,6 +155,9 @@ $.get("https://petstore3.swagger.io/api/v3/pet/10", function(data, status){
 <button id="btn2" >Enviar post swaggeronline</button>
 
 <button id="btn3" >Enviar get proyecto webforms</button>
+<!--
+<button id="dameel10" >Enviar get proyecto webforms</button>
+-->
 
 </body>
 </html>
