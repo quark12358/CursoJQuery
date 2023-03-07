@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!--La sintaxis básica es: $(selector).action()-->
+        <title></title>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+        
+
+       Aledit, Servicios Profesionales Danysoft. www.aledit.com
+        <script>
+$().ready(function() {
+  //abrir libreria validate
+	$("#miformulario").validate({
+		rules: {
+			nombre: { required: true, minlength: 2},
+			email: { required:true, email: true},
+			//telefono: { minlength: 2, maxlength: 15},
+			mensaje: { required:true, minlength: 2},
+			validator: { required:true, maxlength: 4, minlength: 4}
+		},
+		messages: {
+			nombre: "El campo es obligatorio.",
+			email : "El campo es obligatorio y debe tener formato de email correcto.",
+			telefono : "El campo Teléfono no contiene un formato correcto.",
+			mensaje : "El campo Mensaje es obligatorio",
+			validator : "Inerte los cuatro caracteres de la imagen superior.",
+		}
+
+    });  
+   
+ //regla olvidada
+/*   
+ $( "#telefono" ).rules( "add", {
+    required: true, minlength: 2, maxlength: 15
+});
+*/
+//VER DOCUMENTO WORD DE VALIDACIONES y LIBRERIA
+
+});
+        </script>
+       </head>
+       <body>
+        <form id="miformulario" >
+            <ul>
+              <li>
+                <label>Nombre</label>
+                <input type="text" id="nombre" name="nombre" maxlength="125">
+              </li>
+              <li>
+                <label>Email *</label> 
+                <input type="text" id="email" name="email" maxlength="225">
+              </li>
+              <li>
+                <label>Teléfono</label> 
+                <input type="text" id="telefono" name="telefono" maxlength="50">
+              </li>
+              <li>
+                <label>Mensaje *</label> 
+                <textarea id="mensaje" name="mensaje" rows="5" cols="36"></textarea>
+              </li>
+              <li>
+                <input type="submit" value="Enviar">
+              </li>
+            </ul>
+            </form>
+       </body>
+       
+</html>
