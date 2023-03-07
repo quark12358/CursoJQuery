@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+//ejemplo servidor webforms mvc 
+//https://localhost:44312/Help/Api/GET-api-Values
+/*$("#btn3").click(function(){
+    $.get("https://localhost:44312/Help/Api/GET-api-Values", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+       //para y mira consola
+       //data[0].category['id']
+       //data[0].id
+       //data[0].category['name']
+       //...
+
+
+      //mira los elementos
+      $.each(data, function (ind, elem) { 
+        console.log('¡recorriendo JSON id:'+ elem + ' ind:'+ ind +'!'); 
+
+        });
+    });
+});
+*/
+
+  $("#damedatos").click(function(){
+    //https://petstore3.swagger.io/api/v3/store/inventory
+//1
+/*
+    $.get("https://petstore3.swagger.io/api/v3/store/inventory", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+*/
+/*
+
+*/
+
+//2 Finds Pets by status
+    $.get("https://petstore3.swagger.io/api/v3/pet/findByStatus?status=available", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+       //para y mira consola
+       //data[0].category['id']
+       //data[0].id
+       //data[0].category['name']
+       //...
+
+
+      //mira los elementos
+      $.each(data, function (ind, elem) { 
+        console.log('¡recorriendo JSON id:'+ elem + ' ind:'+ ind +'!'); 
+        //console.log('¡recorriendo JSON id:'+ elem.id +'!'); 
+
+        //console.log('¡Mascotas disponibles categoria:'+ elem.category +'!'); 
+        });
+    });
+
+/*inpecionar consola y explicarla!!!!!!
+    data[] en consola
+    data.length
+    data[0].id
+
+*/
+
+
+
+
+
+
+
+
+//datos mascota 10 
+$.get("https://petstore3.swagger.io/api/v3/pet/10", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+
+
+      //mira los elementos propiedad valor
+      $.each(data, function (ind, elem) { 
+        console.log('¡find by tags :'+ elem.id +'!'); });
+    });
+
+//alta de objeto
+
+
+//https://localhost:44312/Help/Api/GET-api-Values
+
+  /////////////////////////////////////////////////////
+
+  });
+
+
+//hacer un post
+  //post local  //https://petstore3.swagger.io/api/v3/pet
+  $("#btn2").click(function(){
+    $.post("https://petstore3.swagger.io/api/v3/pet",
+    {
+        "id": 887,
+        "name": "migatito222",
+        "category": {
+            "id": 1,
+            "name": "Dogs"
+        },
+        "photoUrls": [
+            "string"
+        ],
+        "tags": [
+            {
+            "id": 0,
+            "name": "string"
+            }
+        ],
+        "status": "available"
+    },
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+        alert("Mira la pag https://editor.swagger.io/ y busca tu id /pet/petId Find pet by ID")
+
+    });
+    });
+
+
+$("#btn3").click(function(){
+    $.get("https://localhost:44312/Help/Api/GET-api-Values", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+       //para y mira consola
+       //data[0].category['id']
+       //data[0].id
+       //data[0].category['name']
+       //...
+
+
+      //mira los elementos
+      $.each(data, function (ind, elem) { 
+        console.log('¡recorriendo JSON id:'+ elem + ' ind:'+ ind +'!'); 
+        //console.log('¡recorriendo JSON id:'+ elem.id +'!'); 
+
+        //console.log('¡Mascotas disponibles categoria:'+ elem.category +'!'); 
+        });
+    });
+});
+
+
+    /*
+   $.post("demo_test_post.asp",
+    {
+        name: "Donald Duck",
+        city: "Duckburg"
+    },
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+    });
+data : {idP: ‘10’}
+    */
+
+////////////////////////////////////////////////
+
+$("#btn4").click(function(){
+  console.log("in");
+  debugger;
+$.ajax(
+{
+  url : 'https://petstore3.swagger.io/api/v3/pet/10',
+  type: "GET",
+  data : {id:'10'}
+})
+  .done(function(data) {
+    alert("id traido "+data.id);
+    console.log("id traido "+data.id);
+    $("#respuesta").html(data.id);
+    //console.log($("#respuesta").html(data));
+  })
+  .fail(function(data) {
+    alert( "error" );
+  })
+  .always(function(data) {
+    alert( "complete" );
+    //console.log($("#respuesta").html(data));
+  });
+
+});
+/*
+Url: indica la url donde enviaremos la petición.
+Type: especifica el tipo de petición (GET o POST).
+Data: datos que enviamos junto a la petición. Por ejemplo si el tipo es ‘get’, es equivalente a los parámetros que le pasaríamos a la url (?nombre=Luis&apellidos=lopez).
+DataType: tipo de datos que esperamos en la repuesta del servidor (XML, HTML, JSON, SCRIPT).
+Async: Para elegir s queremos una petición síncrona o asíncrona.
+Una vez terminada la petición Ajax, tenemos 3 métodos con los que podemos recoger los datos recibidos, o controlar si ha habido algún error, o simplemente hacer algo cuando termine la petición.
+
+.done: Si la petición Ajax se ha realizado correctamente, entra en este método. En data están los datos enviados por el servidor.
+
+.fail: Se ejecuta si ha ocurrido algún problema en la petición, por ejemplo cuando la url especificada no existe.
+
+.always: Como su nombre indica, se ejecuta siempre, independientemente si la petición es correcta o no. Muy útil si por ejemplo queremos quitar una imagen o texto indicando que se están cargando datos.
+*/
+////////////////////////////////////////////////
+});
+</script>
+</head>
+<body>
+
+<button id="damedatos">Haz un get de mascotas status=available</button>
+
+<button id="btn2" >Enviar post swaggeronline</button>
+
+<button id="btn3" >Enviar get proyecto webforms</button>
+<button id="btn4" >Enviar get Ajax</button>
+<p id="respuesta"> txtrespuesta</p>
+
+</body>
+</html>
