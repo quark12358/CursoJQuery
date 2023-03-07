@@ -1,3 +1,7 @@
 proyecto web api ajax mvc webforms Visual studio
 +
 swagger cliente y server vscode
+
+validar formulario hardcode y libreria
+excepciones
+serialize

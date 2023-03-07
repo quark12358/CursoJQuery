@@ -1,6 +1,0 @@
-Configuración combinaciones de teclas
-F11 paso a paso entrando en llamadas internas
-F10 paso a paso en el fichero actual
-F8 avanza hast siguiente punto interrupción
-...
- 

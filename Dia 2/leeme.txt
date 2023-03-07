@@ -1,0 +1,36 @@
+Configuración combinaciones de teclas
+F11 paso a paso entrando en llamadas internas
+F10 paso a paso en el fichero actual
+F8 avanza hast siguiente punto interrupción
+console log 
+
+hacer ejemplo ajax3 y depurar todo
+/////////////////////////////////////////////////////////////////
+Depuración javascript
+console.log(objeto/mensage);
+// si queremos ver el valor de la variable c
+console.log(c);
+
+//
+a=1;
+b=2;
+console.log(a+b);
+if (a>0) { console.log(a)};
+
+console.log(jQuery().jquery);
+/////////////////////////////////////////////////////////////////
+hacer ejemplos carpeta 2
++empezar ejemplos basics y seguir 
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 2\jquery-examples-master\basics
+
+
+
+ejemplos del word al menos datapicker
+
+...
+https://rules.sonarsource.com/plsql/type/Code%20Smell
+https://rules.sonarsource.com/csharp
+contar por encima trucos nginx
+
+
+
