@@ -1,6 +1,14 @@
-proyecto web api ajax mvc webforms Visual studio
-+
-swagger cliente y server vscode
+1) proyecto web api ajax mvc webforms Visual studio
+
+fallaba pq faltaba en HelpController.cs
+
+
+        public ActionResult Api(string apiId)
+        {
+            //ilpilpilp
+            HttpContext.Response.AddHeader("Access-Control-Allow-Origin", "*");
+
+
 
 validar formulario hardcode y libreria
 excepciones

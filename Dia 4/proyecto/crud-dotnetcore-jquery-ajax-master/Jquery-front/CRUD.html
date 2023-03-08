@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRUD con AJAX de jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>CRUD con AJAX de jQuery</h2>
+
+
+        <form id="formulario" class="form-horizontal">
+    
+            <input type="hidden" id="id" name="id">
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nombre">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa el nombre"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="apellido">Apellido:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="apellido" name="apellido"
+                        placeholder="Ingresa el apellido" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa el email"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+            
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+            
+                    <button type="button" id="cancelar" class="btn btn-default">Cancelar</button>
+                </div>
+            </div>
+        </form>
+
+
+        <table id="tabla" class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            function cargarRegistros() {
+                $.ajax({
+                    url: 'https://localhost:44364/Usuario',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (respuesta) {
+
+                        $('#tabla tbody').empty();
+                        $.each(respuesta, function (i, registro) {
+                            $('#tabla tbody').append(`
+                                <tr>
+                                    <td>${registro.id}</td>
+                                    <td>${registro.nombre}</td>
+                                    <td>${registro.apellido}</td>
+                                    <td>${registro.email}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm editar" data-id="${registro.id}" data-nombre="${registro.nombre}" data-apellido="${registro.apellido}" data-email="${registro.email}">Editar</button>
+                                        <button type="button" class="btn btn-danger btn-sm eliminar" data-id="${registro.id}">Eliminar</button>
+                                    </td>
+                                </tr>
+                            `);
+                        });
+                    },
+                    error: function () {
+                        alert('Ocurrió un error al cargar los registros');
+                    }
+                });
+            }
+            cargarRegistros();
+
+            function mostrarFormularioCrear() {
+                $('#id').val('');
+                $('#nombre').val('');
+                $('#apellido').val('');
+                $('#email').val('');
+
+                $('#formulario h2').text('Crear registro');
+
+                $('#formulario button[type=submit]').text('Crear');
+            }
+
+            function mostrarFormularioEditar(id, nombre, apellido, email) {
+                $('#id').val(id);
+                $('#nombre').val(nombre);
+                $('#apellido').val(apellido);
+                $('#email').val(email);
+
+                $('#formulario h2').text('Editar registro');
+
+                $('#formulario button[type=submit]').text('Guardar');
+            }
+
+            $('#crear').click(function () {
+                mostrarFormularioCrear();
+            });
+
+            $('#tabla').on('click', '.editar', function () {
+                var id = $(this).data('id');
+                var nombre = $(this).data('nombre');
+                var apellido = $(this).data('apellido');
+                var email = $(this).data('email');
+
+                mostrarFormularioEditar(id, nombre, apellido, email);
+            });
+
+            $('#cancelar').click(function () {
+                mostrarFormularioCrear();
+            });
+
+            $('#formulario').submit(function (evento) {
+                evento.preventDefault();
+
+                var datos = $(this).serialize();
+
+                $.ajax({
+                    url: 'https://localhost:44364/Usuario',
+                    type: $('#id').val() ? 'PUT' : 'POST',
+                    data: datos,
+                    dataType: 'json',
+                    success: function () {
+                        cargarRegistros();
+                        mostrarFormularioCrear();
+                    },
+                    error: function () {
+                        alert('Ocurrió un error al guardar el registro');
+                    }
+                });
+            });
+            $('#tabla').on('click', '.eliminar', function () {
+                var id = $(this).data('id');
+                if (confirm('¿Está seguro de eliminar este registro?')) {
+                    $.ajax({
+                        url: 'https://localhost:44364/Usuario/' + id,
+                        type: 'DELETE',
+                        dataType: 'json',
+                        success: function () {
+                            cargarRegistros();
+                        },
+                        error: function () {
+                            alert('Ocurrió un error al eliminar el registro');
+                        }
+                    });
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

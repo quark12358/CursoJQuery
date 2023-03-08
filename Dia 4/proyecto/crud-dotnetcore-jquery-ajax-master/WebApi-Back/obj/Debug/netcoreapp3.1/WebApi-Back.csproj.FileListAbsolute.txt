@@ -1,0 +1,52 @@
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.exe
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.deps.json
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.runtimeconfig.json
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.runtimeconfig.dev.json
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.dll
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.pdb
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Programacion\ProyectoIgnacio\WebApi-Back\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.AssemblyInfoInputs.cache
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.AssemblyInfo.cs
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.csproj.CoreCompileInputs.cache
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.MvcApplicationPartsAssemblyInfo.cs
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.MvcApplicationPartsAssemblyInfo.cache
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\staticwebassets\WebApi-Back.StaticWebAssets.Manifest.cache
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.RazorTargetAssemblyInfo.cache
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.csproj.CopyComplete
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.dll
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.pdb
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.genruntimeconfig.cache
+D:\Programacion\ProyectoIgnacio\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.csproj.AssemblyReference.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.exe
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.deps.json
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.runtimeconfig.json
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.runtimeconfig.dev.json
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.dll
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\WebApi-Back.pdb
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.csproj.AssemblyReference.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.AssemblyInfoInputs.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.AssemblyInfo.cs
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.csproj.CoreCompileInputs.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\staticwebassets\WebApi-Back.StaticWebAssets.Manifest.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\staticwebassets\WebApi-Back.StaticWebAssets.xml
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebApi-Back.styles.css
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.RazorTargetAssemblyInfo.cache
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.csproj.CopyComplete
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.dll
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.pdb
+C:\Users\i.lorente.DANYLOCAL\Documents\GitHub\CursoJQuery\Dia 4\proyecto\crud-dotnetcore-jquery-ajax-master\WebApi-Back\obj\Debug\netcoreapp3.1\WebApi-Back.genruntimeconfig.cache

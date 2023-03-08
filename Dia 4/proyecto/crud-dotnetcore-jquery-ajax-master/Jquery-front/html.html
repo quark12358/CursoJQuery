@@ -1,0 +1,35 @@
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+<form id="miFormulario">
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <input type="text" name="apellido" placeholder="Apellido" />
+    <input type="email" name="email" placeholder="Correo electrónico" />
+    <button type="submit">Enviar</button>
+</form>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('#miFormulario').on('submit', function (event) {
+            event.preventDefault();
+
+            var datos = $(this).serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: 'https://localhost:44364/Usuario',
+                data: datos,
+                success: function (respuesta) {
+                    console.log(respuesta);
+                },
+                error: function (error) {
+                    console.log('Ha ocurrido un error: ' + error);
+                }
+            });
+        });
+    });
+
+</script>

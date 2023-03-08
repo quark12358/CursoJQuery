@@ -14,7 +14,12 @@
         <script>
 $().ready(function() {
   //abrir libreria validate
-	$("#miformulario").validate({
+  $('input').bind('input propertychange', function() 
+  {
+    
+    $("input").validate(
+      
+      { 
 		rules: {
 			nombre: { required: true, minlength: 2},
 			email: { required:true, email: true},
@@ -28,16 +33,30 @@ $().ready(function() {
 			telefono : "El campo Teléfono no contiene un formato correcto.",
 			mensaje : "El campo Mensaje es obligatorio",
 			validator : "Inerte los cuatro caracteres de la imagen superior.",
-		}
+    }}); 
+  }); 
 
-    });  
+
+
+
+
+
+     
    
  //regla olvidada
-/*   
+ /*
+ $('input').bind('input propertychange', function() 
+ {
+  debugger;
+  $( "input" ).trigger( "validate" );
+  //$("input").validate();                        //comprobar($(this).attr('id'));
+ });
+ */
+
  $( "#telefono" ).rules( "add", {
     required: true, minlength: 2, maxlength: 15
 });
-*/
+
 //VER DOCUMENTO WORD DE VALIDACIONES y LIBRERIA
 
 });

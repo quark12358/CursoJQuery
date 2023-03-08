@@ -1,3 +1,13 @@
 +validaciones complejas
 + rules
 + serializaciones
+
+
+ejercicios resueltos
+https://github.com/fryntiz/jquery-ejercicios-resueltos
+
+
+https://learn.microsoft.com/es-es/shows/asp-net-site-videos/how-do-i-customize-error-handling-aspnet-ajax-updatepanel
+-------------------------------------------------------------
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript
+
