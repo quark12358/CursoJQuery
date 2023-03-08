@@ -14,14 +14,15 @@ function myFunction() {
   message.innerHTML = "";
   let x = document.getElementById("demo").value;
   try {
-    if(x.trim() == "") throw "empty";
-    if(isNaN(x)) throw "not a number";
+    if(x.trim() == "") throw "vacio";
+    if(isNaN(x)) throw "no numérica";
     x = Number(x);
-    if(x < 5) throw "too low";
-    if(x > 10) throw "too high";
+    if(x == 666) throw "un número prohibido";
+    if(x < 5) throw "muy pequeño";
+    if(x > 10) throw "muy grande";
   }
   catch(err) {
-    message.innerHTML = "Input is " + err;
+    message.innerHTML = "la entrada es " + err;
   }
 
   finally {
