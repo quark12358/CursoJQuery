@@ -1,0 +1,25 @@
+dia 4 
+https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-debug-aspnet-ajax-applications-using-visual-studio-2005
+
+valida form lost focus all objects 
+
+trigger webforms
+
+ejemplo web forms con ajax puro 
+
+33861334
+
+try catch jquery 
+controles jqueryui mas usados
+
+
+
+ejercicio 1 
+generar una pagina web  con un formulario con los inputs 
+
+
+repasar ejemplos no vistos
+
+repasar word entero
+
+
