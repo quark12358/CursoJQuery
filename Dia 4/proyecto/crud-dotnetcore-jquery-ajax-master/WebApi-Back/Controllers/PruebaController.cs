@@ -30,14 +30,14 @@ namespace WebApi_Back.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
-            return new string[] { "value1", "value2" };
+            
         }
 
         // PUT api/<PruebaController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
-            return null;
+            
         }
 
         // DELETE api/<PruebaController>/5

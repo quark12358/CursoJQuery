@@ -1,0 +1,251 @@
+﻿ 
+
+@model IEnumerable<dashboard.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+
+<div class="container">
+    <a class="btn btn-success"  onclick="PopupForm('@Url.Action("AddOrEdit","Employees")')">Add New</a>
+    <div class="btnDelete">
+        <button class="btn btn-danger" id="btnDelete">Delete Checked Rows</button>
+    </div>
+    <div class="table-responsive">
+     
+        <table id="myTable" class=" ui celled   table ">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>HireDate</th>
+                    <th>Actions</th>
+                    <th>
+                        <input type='checkbox' id="checkAll" name='prog'>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        
+         
+    </div>
+</div>
+
+ 
+
+@section Scripts{
+    
+    <script>
+       var Popup
+
+       function PopupForm(url) {
+
+           var formDiv = $('<div/>')
+           $.get(url)
+               .done(function (response) {
+                   formDiv.html(response)
+
+                   Popup = formDiv.dialog({
+                       autoOpen: true,
+                       resizeable: false,
+                       title: "Fill Employee Details",
+                       height: 500,
+                       width: 700,
+                       close: function () {
+                           Popup.dialog('destroy').remove();
+                       }
+
+                   })
+               })
+       }
+
+
+       function SubmitForm(form) {
+           $.validator.unobtrusive.parse(form)
+           if ($(form).valid()) {
+               $.ajax({
+                   type: "POST",
+                   url: form.action,
+                   data: $(form).serialize(),
+                   success: function (data) {
+                       if (data.success) {
+                           Popup.dialog('close')
+                           gloabalTable.ajax.reload();
+                           $.notify(data.message, {
+                               globalPosition: "top center",
+                               className: "success"
+                           })
+                       }
+                   }
+               })
+           }
+
+
+           return false;
+       }
+       $(document).ready(function () {
+
+
+
+
+           gloabalTable = $('#myTable').DataTable(
+               {
+
+                    //scrollX: true,
+                   lengthChange: true,
+                   info: true,
+                   searching: true,
+                   search: true,
+                   ordering: true,
+                   searchDelay: 1000,
+                   searchable: true,
+                   processing: true,
+                   serverSide: true,
+                   language: {
+                       "processing": "Processing... Please wait",
+                       paginate: {
+                           next: "Next",
+                           previous: "Pervious"
+                       },
+                       "emptyTable":"No Data Found, Please Click on <b>Add new </b> Button"
+                   },
+                   ajax: {
+                       url: "Employees/Get",
+                       type: "Get",
+
+                   },
+
+                   columns: [
+                        {
+                            className: 'dt-control',
+                            orderable: false,
+                            data: null,
+                            defaultContent: '',
+                        },
+                       { data: "Id", name: "Id" },
+                       { data: "Name", name: "Name" },
+                       { data: "Email", name: "Email" },
+                       { data: "Phone", name: "Phone" },
+                       { data: "HireDate",  "render": function (value) {
+                           if (value === null) return "";
+                           return moment(value).format('MM/DD/YYYY');
+                       }
+                           , name: "HireDate"
+                       },
+
+                       {
+                           data: "Id", "render": function (data) {
+                               return "<a class='btn btn-primary' onclick=PopupForm('@Url.Action("AddOrEdit","Employees")/"+data+"')>Edit<a/>";
+                           }, "orderable": false,
+                       },
+
+                        {
+                            data: "Id", "render": function (data) {
+
+                                return "<input type='checkbox'     class='deleteEmployee' style='display: block;'data-id='" + data + "' >"
+
+                            }, "orderable": false, "width": "100px"
+                        }
+                   ]
+
+               }
+           );
+
+           $("#checkAll").click(function () {
+               $('input:checkbox').not(this).prop('checked', this.checked);
+           });
+
+
+           $('#btnDelete').hide();
+
+ $(document).on("click", "input[type=checkbox]", function () {
+    if( $("input[type=checkbox]:checked").length == 0){
+        $('#btnDelete').hide();
+    }
+    else {
+        $('#btnDelete').show();
+    }
+
+
+           })
+
+
+
+
+
+           $('#myTable tbody').on('click', 'td.dt-control', function () {
+               var tr = $(this).closest('tr');
+
+               var row = gloabalTable.row(tr);
+
+               if (row.child.isShown()) {
+                   // This row is already open - close it
+                   row.child.hide();
+                   tr.removeClass('shown');
+               } else {
+                   // Open this row
+                   row.child(format(row.data())).show();
+                   tr.addClass('shown');
+               }
+           });
+
+       });
+
+
+       function format(d) {
+           // `d` is the original data object for the row
+           return (
+               '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+               '<tr>' +
+               '<td>Full name:</td>' +
+               '<td>' +
+               d.Name +
+               '</td>' +
+               '</tr>' +
+               '<tr>' +
+               '<td>Extension number:</td>' +
+               '<td>' +
+               d.Email +
+               '</td>' +
+               '</tr>' +
+               '<tr>' +
+               '<td>Extra info:</td>' +
+               '<td>'+d.Phone+'</td>' +
+               '</tr>' +
+               '</table>'
+           );
+       }
+
+
+          $("#btnDelete").on("click", function () {
+           listOfArray = [];
+           $(".deleteEmployee:checked").each(function () {
+               listOfArray.push($(this).attr("data-id"));
+           })
+
+
+           $.ajax({
+               url: "/Employees/DeleteEmployees",
+               method: "POST",
+               contentType: "application/json",
+               data: JSON.stringify(listOfArray),
+               success: function (result) {
+                   swal("successful Deletation", "", "success")
+                   gloabalTable.ajax.reload();
+                   $("#checkAll").prop("checked", false);
+               }
+           })
+
+       });
+    </script>
+
+}
