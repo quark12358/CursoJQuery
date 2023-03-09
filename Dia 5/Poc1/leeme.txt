@@ -1,0 +1,52 @@
+probar y agregar tercer boton al final en el  código default.aspx 
+
+
+
+
+
+    <button id="boton_get_id3">boton get forma 3</button>   
+<script>
+
+    $("#boton_get_id3").click(function (event) {
+        event.preventDefault();   /////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        console.log("in");
+        //debbuger;
+        alert($('#mirul').text());
+        var miruta = $('#mirul').text();
+        var metodo = $('#metodo').text();
+
+        debugger;
+        console.log(miruta);
+
+        $.ajax(
+            {
+                url: miruta,
+                type: metodo,
+                data: {}
+            })
+            .done(function (data) {
+                alert("ok");
+                debugger;
+                alert("categoria traido " + data.category.name);
+                //console.log("id traido "+data.id);
+                //$("#respuesta").html(data.id);
+                //console.log($("#respuesta").html(data));
+            })
+            .fail(function (data) {
+                alert("error");
+            })
+            .always(function (data) {
+                alert("complete");
+                //console.log($("#respuesta").html(data));
+            });
+
+    });
+
+
+
+</script>
+
+</asp:Content>
+
+
+

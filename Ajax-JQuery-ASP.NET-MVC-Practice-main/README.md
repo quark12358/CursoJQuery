@@ -1,1 +1,0 @@
-# AJAX-JQUERY-ASP-.NET-MVC-Practice
