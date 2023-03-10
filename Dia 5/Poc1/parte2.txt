@@ -1,0 +1,14 @@
+ver ejercicio que se quiera
+repasar 	ideas 
+		recursos
+
+comprobar Poc que les funciona en un proyecto suyo 
+
+
+migrados
+
+1) asignaciones de clases en proyectos
+2) https://refactoring.guru/es/design-patterns
+3) https://learn.microsoft.com/en-us/archive/msdn-magazine/2017/april/containers-modernizing-traditional-net-apps-with-docker
+4) https://developer.chrome.com/docs/devtools/javascript/
+5) https://learn.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium/overview
