@@ -1,4 +1,7 @@
-probar y agregar tercer boton al final en el  código default.aspx 
+1) paquete compatible y plantillas para vs2022 , sin adaptadores....
+2) 
+
+probar 2 botones primero y agregar tercer boton al final en el  código default.aspx 
 
 
 

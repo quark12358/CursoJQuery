@@ -1,0 +1,121 @@
+      <div class="jumbotron">
+        <h1 id="metodo">GET</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2 id="mirul">https://petstore3.swagger.io/api/v3/pet/10</h2>
+        </div>
+        <div class="col-md-4">
+            <h2 id="misdatossalida">DATA[]</h2>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                
+        </div>
+    </div>
+
+<button id="boton_get_id">boton get</button>        
+    <script> var boton = document.getElementById("boton_get_id");
+        boton.addEventListener("click", function (event) {
+            event.preventDefault();                // Creamos una instancia del objeto XMLHttpRequest  !!!!!!              
+            var xhttp = new XMLHttpRequest();                // Definimos la función a ejecutar cuando recibimos la respuesta del servidor                
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {                        // Si la respuesta es correcta, imprimimos en la consola la respuesta del servidor                        
+                    console.log(this.responseText); alert(this.responseText)
+                }
+            };                // Definimos la URL de la API y el método HTTP a utilizar                
+            var url = "https://petstore3.swagger.io/api/v3/pet/10";
+            var method = "GET";                // Abrimos la conexión                
+            xhttp.open(method, url);                // Enviamos la petición al servidor                
+            xhttp.send();
+        });
+
+    </script>
+
+<button id="boton_get_id2">boton get forma 2</button>   
+<script>
+
+    $("#boton_get_id2").click(function (event) {
+        event.preventDefault();   /////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+   
+
+
+        console.log("in");
+        //debugger;
+        $.ajax(
+            {
+                url: 'https://petstore3.swagger.io/api/v3/pet/10',
+                type: "GET",
+                data: {}
+            })
+            .done(function (data) {
+                alert("ok");
+                alert("id traido " + data.id);
+                //console.log("id traido "+data.id);
+                //$("#respuesta").html(data.id);
+                //console.log($("#respuesta").html(data));
+            })
+            .fail(function (data) {
+                alert("error");
+            })
+            .always(function (data) {
+                alert("complete");
+                //console.log($("#respuesta").html(data));
+            });
+
+    });
+
+
+
+</script>
+
+
+
+    <button id="boton_get_id3">boton get forma 3</button>   
+<script>
+
+    $("#boton_get_id3").click(function (event) {
+        event.preventDefault();   /////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        console.log("in");
+        //debbuger;
+        alert($('#mirul').text());
+        var miruta = $('#mirul').text();
+        var metodo = $('#metodo').text();
+
+        debugger;
+        console.log(miruta);
+
+        $.ajax(
+            {
+                url: miruta,
+                type: metodo,
+                data: {}
+            })
+            .done(function (data) {
+                alert("ok");
+                debugger;
+                alert("categoria traido " + data.category.name);
+                //console.log("id traido "+data.id);
+                //$("#respuesta").html(data.id);
+                //console.log($("#respuesta").html(data));
+            })
+            .fail(function (data) {
+                alert("error");
+            })
+            .always(function (data) {
+                alert("complete");
+                //console.log($("#respuesta").html(data));
+            });
+
+    });
+
+
+
+</script>
+
+</asp:Content>
+
+
+
